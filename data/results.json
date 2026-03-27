@@ -5,7 +5,7 @@
     "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
     "type": "item",
     "notes": "Alert me if under $37.99",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": "$37.99",
     "original_price": null,
     "discount_pct": null,
@@ -26,7 +26,7 @@
         "code": null
       },
       {
-        "title": "Free Mini Cap",
+        "title": "Free Mini Cap with Purchase",
         "description": "Free Mini Cap over $100",
         "code": null
       }
@@ -41,7 +41,7 @@
     "url": "https://www.neweracap.com/collections/mlb-sale?filter.p.m.my_fields.team=Arizona+Diamondbacks&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
@@ -65,27 +65,32 @@
     "item_deals": [
       {
         "title": "Arizona Diamondbacks St. Patrick's Day 2026 59FIFTY Fitted",
-        "description": "Original: $52.99",
-        "discount": "$39.74 (25% off)"
+        "description": "$52.99 to $39.74",
+        "discount": "25%"
+      },
+      {
+        "title": "Arizona Diamondbacks Floral Shine Low Profile 59FIFTY Fitted",
+        "description": "$54.99 to $41.24",
+        "discount": "25%"
       },
       {
         "title": "Arizona Diamondbacks Gold 59FIFTY A-Frame Fitted",
-        "description": "Original: $47.99",
-        "discount": "$31.19 (35% off)"
+        "description": "$47.99 to $31.19",
+        "discount": "35%"
       },
       {
         "title": "Arizona Diamondbacks Three Looms Wool Duck Camo 19TWENTY Adjustable",
-        "description": "Original: $49.99",
-        "discount": "$27.49 (45% off)"
+        "description": "$49.99 to $27.49",
+        "discount": "45%"
       },
       {
         "title": "Arizona Diamondbacks Everyday Nylon Black 9TWENTY Adjustable",
-        "description": "Original: $34.99",
-        "discount": "$19.24 (45% off)"
+        "description": "$34.99 to $19.24",
+        "discount": "45%"
       }
     ],
     "is_on_sale": true,
-    "summary": "New Era DBacks sale features up to 45% off select styles with multiple hats exceeding the 30% discount threshold requested."
+    "summary": "New Era Cap Arizona Diamondbacks sale featuring up to 45% off select hats, with multiple items exceeding 30% discount."
   },
   {
     "id": "new-era-football",
@@ -93,7 +98,7 @@
     "url": "https://www.neweracap.com/collections/nfl-sale?filter.p.m.my_fields.team=Arizona+Cardinals&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
@@ -105,39 +110,44 @@
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Discount on Alpha Industries branded items",
+        "description": "Discount on Alpha Industries apparel",
         "code": null
       },
       {
         "title": "Free shipping",
-        "description": "Free shipping on orders over $100.00",
+        "description": "Free shipping on orders over $100",
+        "code": null
+      },
+      {
+        "title": "Gift with Purchase",
+        "description": "Free Mini Cap with orders over $100",
         "code": null
       }
     ],
     "item_deals": [
       {
         "title": "Arizona Cardinals 2025 Training 59FIFTY Fitted",
-        "description": "Original $49.99, now $32.49",
+        "description": "$49.99 \u2192 $32.49",
         "discount": "35% OFF"
       },
       {
         "title": "Arizona Cardinals 2025 Draft 59FIFTY A-Frame Fitted",
-        "description": "Original $49.99, now $32.49",
+        "description": "$49.99 \u2192 $32.49",
         "discount": "35% OFF"
       },
       {
         "title": "Arizona Cardinals 2025 Draft Black 59FIFTY A-Frame Fitted",
-        "description": "Original $49.99, now $32.49",
+        "description": "$49.99 \u2192 $32.49",
         "discount": "35% OFF"
       },
       {
         "title": "Arizona Cardinals 2024 Crucial Catch 9SEVENTY Trucker",
-        "description": "Original $39.99, now $29.99",
+        "description": "$39.99 \u2192 $29.99",
         "discount": "25% OFF"
       }
     ],
     "is_on_sale": true,
-    "summary": "New Era Cardinals hats on sale with up to 45% off select styles; multiple items exceed the 30% discount threshold requested."
+    "summary": "New Era Cap is offering up to 45% off select NFL Arizona Cardinals hats, with multiple styles discounted 30-35%, meeting the user's search for deals over 30%."
   },
   {
     "id": "new-era-basketball",
@@ -145,14 +155,14 @@
     "url": "https://www.neweracap.com/collections/nba-sale?filter.p.m.my_fields.team=Phoenix+Suns&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
         "title": "Up to 45% off select styles",
-        "description": "Store-wide promotion on select NBA styles",
+        "description": "Store-wide promotion on selected NBA items",
         "code": null
       },
       {
@@ -161,50 +171,60 @@
         "code": null
       },
       {
-        "title": "Free shipping",
-        "description": "Free shipping on orders over $100.00",
+        "title": "Free shipping over $100",
+        "description": "Free shipping on orders $100 and above",
         "code": null
       },
       {
-        "title": "Free Mini Cap",
-        "description": "Free Mini 59FIFTY Fitted Hat with purchase over $100.00",
+        "title": "Free Mini Cap with purchase over $100",
+        "description": "Gift with purchase promotion",
         "code": null
       }
     ],
     "item_deals": [
       {
         "title": "Phoenix Suns Alpha Industries L-2B Hooded Bomber Jacket",
-        "description": "$249.99 reduced to $125.00",
+        "description": "$249.99 \u2192 $125.00",
         "discount": "50% OFF"
       },
       {
         "title": "Phoenix Suns Gold 59FIFTY A-Frame Fitted",
-        "description": "$47.99 reduced to $31.19",
+        "description": "$47.99 \u2192 $31.19",
+        "discount": "35% OFF"
+      },
+      {
+        "title": "Phoenix Suns Black All-Over-Print Shorts",
+        "description": "$69.99 \u2192 $45.49",
         "discount": "35% OFF"
       },
       {
         "title": "Phoenix Suns Sport Classics Chrome White T-Shirt",
-        "description": "$37.99 reduced to $28.49",
+        "description": "$37.99 \u2192 $28.49",
         "discount": "25% OFF"
       },
       {
         "title": "Phoenix Suns Sport Classics Pastel 59FIFTY Fitted",
-        "description": "$54.99 reduced to $41.24",
+        "description": "$54.99 \u2192 $41.24",
         "discount": "25% OFF"
       },
       {
-        "title": "Phoenix Suns Black All-Over-Print Shorts",
-        "description": "$69.99 reduced to $45.49",
-        "discount": "35% OFF"
+        "title": "Phoenix Suns Sport Classics Pastel Hoodie",
+        "description": "$94.99 \u2192 $71.24",
+        "discount": "25% OFF"
       },
       {
-        "title": "Phoenix Suns Sport Classics Pastel Hoodie",
-        "description": "$94.99 reduced to $71.24",
+        "title": "Phoenix Suns Utility Linen 19TWENTY Adjustable",
+        "description": "$39.99 \u2192 $29.99",
+        "discount": "25% OFF"
+      },
+      {
+        "title": "Phoenix Suns Sport Classics Pastel 9TWENTY A-Frame Adjustable",
+        "description": "$36.99 \u2192 $27.74",
         "discount": "25% OFF"
       }
     ],
     "is_on_sale": true,
-    "summary": "Phoenix Suns NBA sale featuring up to 45% off select styles, with multiple hat and apparel items discounted over 30% including the L-2B Bomber Jacket at 50% off."
+    "summary": "New Era Suns sale features up to 50% off select hats and apparel, with multiple items exceeding the 30% discount threshold requested."
   },
   {
     "id": "new-era-minorleagues",
@@ -212,7 +232,7 @@
     "url": "https://www.neweracap.com/collections/milb-sale",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
@@ -240,7 +260,7 @@
     ],
     "item_deals": [],
     "is_on_sale": true,
-    "summary": "New Era MiLB sale offers up to 45% off select styles with free shipping over $100, meeting the user's requirement for discounts over 30%."
+    "summary": "New Era's MiLB sale offers up to 45% off select styles with no specific individual items visible on the page, though store-wide promotions include free shipping over $100 and a free mini cap gift."
   },
   {
     "id": "nike-store",
@@ -248,7 +268,7 @@
     "url": "https://www.nike.com/w/sale",
     "type": "store",
     "notes": "Anything over 40% off",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
@@ -263,14 +283,14 @@
     "url": "https://www.bestbuy.com/top-deals",
     "type": "store",
     "notes": "Anything over 40% off",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "No page text provided for analysis."
+    "summary": "Parse error"
   },
   {
     "id": "fanatics-baseball",
@@ -278,14 +298,14 @@
     "url": "https://www.fanatics.com/mlb/sale-items/o-3487+os-78+z-8052736-97589246?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223074%22%5D%7D",
     "type": "store",
     "notes": "Looking for any discount over 40%",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "No page text provided for analysis."
+    "summary": "Parse error"
   },
   {
     "id": "47",
@@ -293,7 +313,7 @@
     "url": "https://www.47brand.com/collections/sale",
     "type": "store",
     "notes": "Looking for any discount of more than 30%, especially on hats",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
@@ -307,17 +327,17 @@
     "item_deals": [
       {
         "title": "'47 BLANK CLEAN UP",
-        "description": "Hat currently priced at $35.00",
+        "description": "Discounted hat",
         "discount": null
       },
       {
         "title": "'47 BLANK TWO TONE HITCH",
-        "description": "Hat currently priced at $40.00",
+        "description": "Discounted hat",
         "discount": null
       }
     ],
     "is_on_sale": true,
-    "summary": "The '47 sale page displays 1951 products with free shipping for members, but specific discount percentages and original prices are not visible in the page text provided."
+    "summary": "The '47 Brand sale page features multiple discounted hats and apparel with 1951 products available, but specific discount percentages and original prices are not displayed in the page text."
   },
   {
     "id": "Vans",
@@ -325,14 +345,56 @@
     "url": "https://www.vans.com/en-us/c/shop-5000",
     "type": "store",
     "notes": "Looking for any discount over 40%",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
-    "discount_pct": null,
-    "store_wide_deals": [],
-    "item_deals": [],
-    "is_on_sale": false,
-    "summary": "No pricing or promotion information found on the provided page text."
+    "discount_pct": 40,
+    "store_wide_deals": [
+      {
+        "title": "Extra 40% Off Sale and More",
+        "description": "Extra 40% off sale items. Price as marked.",
+        "code": null
+      },
+      {
+        "title": "Free Shipping",
+        "description": "Free Shipping on Orders $50+",
+        "code": null
+      }
+    ],
+    "item_deals": [
+      {
+        "title": "Classic Half Crew Socks 3-Pack",
+        "description": "Original: $18.00, Now: $7.77",
+        "discount": "57% OFF"
+      },
+      {
+        "title": "Super Lowpro Shoe",
+        "description": "Original: $85.00, Now: $41.97",
+        "discount": "51% OFF"
+      },
+      {
+        "title": "Old Skool Checkerboard Shoe",
+        "description": "Original: $75.00, Now: $35.97",
+        "discount": "52% OFF"
+      },
+      {
+        "title": "Authentic Shoe",
+        "description": "Original: $60.00, Now: $29.97",
+        "discount": "50% OFF"
+      },
+      {
+        "title": "UltraRange 2.0 Shoe",
+        "description": "Original: $100.00, Now: $47.97",
+        "discount": "52% OFF"
+      },
+      {
+        "title": "Knu Skool Shoe",
+        "description": "Original: $85.00, Now: $35.97",
+        "discount": "58% OFF"
+      }
+    ],
+    "is_on_sale": true,
+    "summary": "Vans is offering Extra 40% Off sale items with multiple products discounted 50-58%, exceeding the user's 40% discount requirement."
   },
   {
     "id": "Adidas",
@@ -340,14 +402,20 @@
     "url": "https://www.adidas.com/us/sale",
     "type": "store",
     "notes": "Looking for any discount over 40%",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
-    "store_wide_deals": [],
+    "store_wide_deals": [
+      {
+        "title": "Clothes and Shoes Sale: Extra 30% off",
+        "description": "Extra 30% off select clothes & shoes. Offer ends 3/30.",
+        "code": "MARCH"
+      }
+    ],
     "item_deals": [],
-    "is_on_sale": false,
-    "summary": "No page text provided for analysis."
+    "is_on_sale": true,
+    "summary": "Adidas is offering an extra 30% off select clothes and shoes with code MARCH, which does not meet the user's 40%+ discount requirement."
   },
   {
     "id": "fanatics-football",
@@ -355,14 +423,14 @@
     "url": "https://www.fanatics.com/nfl/sale-items/o-1383+os-45+z-91438378-2717467054?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223418%22%5D%7D",
     "type": "store",
     "notes": "Looking for any discount over 40%",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "No page text provided for analysis."
+    "summary": "Parse error"
   },
   {
     "id": "fanatics-basketball",
@@ -370,13 +438,13 @@
     "url": "https://www.fanatics.com/nba/sale-items/o-3536+os-45+z-94759805-345224176?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223382%22%5D%7D",
     "type": "store",
     "notes": "Looking for any discount over 40%",
-    "last_scan": "2026-03-27T21:34:37.962136+00:00",
+    "last_scan": "2026-03-27T21:44:58.402712+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "No page text provided for analysis."
+    "summary": "Parse error"
   }
 ]
