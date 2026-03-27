@@ -5,7 +5,7 @@
     "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
     "type": "item",
     "notes": "Alert me if under $37.99",
-    "last_scan": "2026-03-27T20:40:48.557333+00:00",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
     "current_price": "$37.99",
     "original_price": null,
     "discount_pct": null,
@@ -27,12 +27,361 @@
       },
       {
         "title": "Free Mini Cap",
-        "description": "Free Mini Cap over $100",
+        "description": "Free Mini Cap over $100 spend",
         "code": null
       }
     ],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "Erie Moon Mammoths Black 9SEVENTY Stretch-Snap Hat is priced at $37.99, meeting the user's alert threshold exactly."
+    "summary": "Erie Moon Mammoths Black 9SEVENTY Stretch-Snap Hat is priced at $37.99, matching the user's alert threshold with no discount currently applied."
+  },
+  {
+    "id": "new-era-baseball",
+    "name": "New Era Baseball",
+    "url": "https://www.neweracap.com/collections/mlb-sale",
+    "type": "store",
+    "notes": "Looking for any discount of over 30%, especially on hats",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [
+      {
+        "title": "Up to 45% off select styles",
+        "description": "Up to 45% off select MLB sale items",
+        "code": null
+      },
+      {
+        "title": "30% off select Alpha Industries styles",
+        "description": "30% discount on select Alpha Industries products",
+        "code": null
+      },
+      {
+        "title": "Free shipping with $100 purchase",
+        "description": "Free shipping when you spend $100.00 or more",
+        "code": null
+      }
+    ],
+    "item_deals": [
+      {
+        "title": "Brooklyn Dodgers Jackie Robinson Day 2025 59FIFTY Fitted",
+        "description": "Save $12.00",
+        "discount": "25% OFF ($47.99 \u2192 $35.99)"
+      },
+      {
+        "title": "Los Angeles Dodgers 2024 Gold Collection 59FIFTY Fitted",
+        "description": "Save $21.60",
+        "discount": "45% OFF ($47.99 \u2192 $26.39)"
+      },
+      {
+        "title": "Houston Astros Championship Side Flag 59FIFTY A-Frame Fitted",
+        "description": "Save $25.20",
+        "discount": "45% OFF ($55.99 \u2192 $30.79)"
+      },
+      {
+        "title": "San Francisco Giants Alpha Industries MA-1 Wool Varsity Jacket Black",
+        "description": "Save $174.99",
+        "discount": "50% OFF ($349.99 \u2192 $175.00)"
+      }
+    ],
+    "is_on_sale": true,
+    "summary": "New Era's MLB Sale offers up to 45% off select styles and 30% off Alpha Industries items, with multiple hats exceeding the requested 30% discount threshold."
+  },
+  {
+    "id": "new-era-football",
+    "name": "New Era Football",
+    "url": "https://www.neweracap.com/collections/nfl-sale",
+    "type": "store",
+    "notes": "Looking for any discount of over 30%, especially on hats",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [
+      {
+        "title": "Up to 45% off select styles",
+        "description": "Store-wide promotion on select NFL items",
+        "code": null
+      },
+      {
+        "title": "30% off select Alpha Industries styles",
+        "description": "Discount on Alpha Industries apparel",
+        "code": null
+      },
+      {
+        "title": "Free shipping",
+        "description": "Free shipping on orders $100.00 and over",
+        "code": null
+      },
+      {
+        "title": "Free Mini Cap",
+        "description": "Free New Era Cap Mini 59FIFTY Fitted Hat with purchase over $100.00",
+        "code": null
+      }
+    ],
+    "item_deals": [
+      {
+        "title": "San Francisco 49ers 2025 NFL Rivalries 59FIFTY Fitted",
+        "description": "$49.99 to $37.49",
+        "discount": "25% OFF"
+      },
+      {
+        "title": "Buffalo Bills 2025 Crucial Catch 39THIRTY Stretch Fit",
+        "description": "$47.99 to $35.99",
+        "discount": "25% OFF"
+      },
+      {
+        "title": "Buffalo Bills 2025 NFL Rivalries 9SEVENTY Stretch-Snap",
+        "description": "$44.99 to $33.74",
+        "discount": "25% OFF"
+      },
+      {
+        "title": "Dallas Cowboys 2025 Training 59FIFTY Fitted",
+        "description": "$49.99 to $32.49",
+        "discount": "35% OFF"
+      }
+    ],
+    "is_on_sale": true,
+    "summary": "New Era Cap NFL Sale offers up to 45% off select styles with multiple hats discounted 25-35%, exceeding the 30% discount threshold requested."
+  },
+  {
+    "id": "new-era-basketball",
+    "name": "New Era Basketball",
+    "url": "https://www.neweracap.com/collections/nba-sale",
+    "type": "store",
+    "notes": "Looking for any discount of over 30%, especially on hats",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [
+      {
+        "title": "Up to 45% off select styles",
+        "description": "Up to 45% off select NBA styles",
+        "code": null
+      },
+      {
+        "title": "30% off select Alpha Industries styles",
+        "description": "30% off select Alpha Industries styles",
+        "code": null
+      },
+      {
+        "title": "Free Shipping",
+        "description": "Free shipping on orders $100+",
+        "code": null
+      },
+      {
+        "title": "Gift with Purchase",
+        "description": "Free Mini Cap 59FIFTY with purchase over $100",
+        "code": null
+      }
+    ],
+    "item_deals": [
+      {
+        "title": "Dallas Mavericks Mascot 59FIFTY Fitted",
+        "description": "Original $49.99",
+        "discount": "35% OFF - $32.49"
+      },
+      {
+        "title": "New York Knicks Ripstop Camo 59FIFTY A-Frame Fitted",
+        "description": "Original $55.99",
+        "discount": "25% OFF - $41.99"
+      },
+      {
+        "title": "Golden State Warriors Alpha Industries MA-1 Wool Varsity Jacket Black",
+        "description": "Original $349.99",
+        "discount": "50% OFF - $175.00"
+      },
+      {
+        "title": "Orlando Magic Mascot 59FIFTY Fitted",
+        "description": "Original $49.99",
+        "discount": "35% OFF - $32.49"
+      },
+      {
+        "title": "Houston Rockets Mascot 59FIFTY Fitted",
+        "description": "Original $49.99",
+        "discount": "35% OFF - $32.49"
+      },
+      {
+        "title": "Boston Celtics Alpha Industries MA-1 Wool Varsity Jacket Black",
+        "description": "Original $349.99",
+        "discount": "50% OFF - $175.00"
+      }
+    ],
+    "is_on_sale": true,
+    "summary": "New Era's NBA Sale features up to 45% off select styles with multiple hats exceeding the requested 30% discount threshold, plus 50% off Alpha Industries jackets and free shipping on orders over $100."
+  },
+  {
+    "id": "new-era-minorleagues",
+    "name": "New Era MiLB",
+    "url": "https://www.neweracap.com/collections/milb-sale",
+    "type": "store",
+    "notes": "Looking for any discount of over 30%, especially on hats",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [
+      {
+        "title": "MiLB Sale",
+        "description": "Up to 45% off select styles",
+        "code": null
+      },
+      {
+        "title": "Alpha Industries Discount",
+        "description": "30% off select Alpha Industries styles",
+        "code": null
+      },
+      {
+        "title": "Free Shipping",
+        "description": "Free shipping on orders over $100.00",
+        "code": null
+      },
+      {
+        "title": "Gift with Purchase",
+        "description": "Free Mini Cap over $100",
+        "code": null
+      }
+    ],
+    "item_deals": [],
+    "is_on_sale": true,
+    "summary": "New Era's MiLB Sale offers up to 45% off select styles, meeting the user's 30% discount threshold, with free shipping on orders over $100."
+  },
+  {
+    "id": "nike-store",
+    "name": "Nike Sale",
+    "url": "https://www.nike.com/w/sale",
+    "type": "store",
+    "notes": "Anything over 40% off",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "Parse error"
+  },
+  {
+    "id": "best-buy-sale",
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/top-deals",
+    "type": "store",
+    "notes": "Anything over 40% off",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "No page text provided for analysis."
+  },
+  {
+    "id": "fanatics-baseball",
+    "name": "Fanatics MLB",
+    "url": "https://www.fanatics.com/mlb/sale-items/o-3487+os-78+z-8052736-97589246?_ref=m-TOPNAV",
+    "type": "store",
+    "notes": "Looking for any discount on any merchandise for Arizona sports teams",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "No pricing or promotion information could be extracted from the provided page text."
+  },
+  {
+    "id": "47",
+    "name": "47",
+    "url": "https://www.47brand.com/collections/sale",
+    "type": "store",
+    "notes": "Looking for any discount of more than 30%, especially on hats",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [
+      {
+        "title": "Free Shipping On All Orders",
+        "description": "Free shipping on all orders for '47 Family members",
+        "code": null
+      }
+    ],
+    "item_deals": [
+      {
+        "title": "'47 BLANK CLEAN UP",
+        "description": "Hat",
+        "discount": null
+      },
+      {
+        "title": "'47 BLANK TWO TONE HITCH",
+        "description": "Hat",
+        "discount": null
+      }
+    ],
+    "is_on_sale": true,
+    "summary": "The '47 brand sale page features 1951 products with free shipping for members, but specific discount percentages and original prices are not displayed in the page text."
+  },
+  {
+    "id": "Vans",
+    "name": "Vans",
+    "url": "https://www.vans.com/en-us/c/shop-5000",
+    "type": "store",
+    "notes": "Looking for any discount over 40%",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "No pricing or promotion information could be extracted from the provided page text."
+  },
+  {
+    "id": "Adidas",
+    "name": "Adidas Sale",
+    "url": "https://www.adidas.com/us/sale",
+    "type": "store",
+    "notes": "Looking for any discount over 40%",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "No page text provided for analysis."
+  },
+  {
+    "id": "fanatics-football",
+    "name": "Fanatics NFL",
+    "url": "https://www.fanatics.com/nfl/sale-items/o-1383+os-45+z-91438378-2717467054?_ref=m-TOPNAV",
+    "type": "store",
+    "notes": "Looking for any discount on any merchandise for Arizona sports teams",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "No page text provided to analyze for pricing and promotion information."
+  },
+  {
+    "id": "fanatics-basketball",
+    "name": "Fanatics NBA",
+    "url": "https://www.fanatics.com/nba/sale-items/o-3536+os-45+z-94759805-345224176?_ref=m-TOPNAV",
+    "type": "store",
+    "notes": "Looking for any discount on any merchandise for Phoenix sports teams",
+    "last_scan": "2026-03-27T21:22:46.145553+00:00",
+    "current_price": null,
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "No page text was provided to analyze for pricing and promotion information."
   }
 ]
