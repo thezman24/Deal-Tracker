@@ -19,6 +19,26 @@ import requests
 from bs4 import BeautifulSoup
 import anthropic
 
+# Selenium is only imported if needed (installed in workflow)
+def _get_driver():
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+    opts = Options()
+    opts.add_argument("--headless")
+    opts.add_argument("--no-sandbox")
+    opts.add_argument("--disable-dev-shm-usage")
+    opts.add_argument("--disable-gpu")
+    opts.add_argument("--window-size=1280,800")
+    opts.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    )
+    service = Service(ChromeDriverManager().install())
+    return webdriver.Chrome(service=service, options=opts)
+
 # ── paths ─────────────────────────────────────────────────────────────────────
 ROOT        = Path(__file__).parent.parent
 WATCHLIST   = ROOT / "data" / "watchlist.json"
@@ -35,19 +55,45 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-def fetch_page(url: str) -> str:
-    """Fetch a page and return cleaned text (≤8000 chars for the AI prompt)."""
+MIN_TEXT_LEN = 200   # if static fetch returns less than this, try the browser
+
+def _extract_text(html: str) -> str:
+    soup = BeautifulSoup(html, "lxml")
+    for tag in soup(["script", "style", "nav", "footer", "header", "svg", "img"]):
+        tag.decompose()
+    return " ".join(soup.get_text(separator=" ", strip=True).split())[:8000]
+
+def fetch_page_static(url: str) -> str:
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    return _extract_text(resp.text)
+
+def fetch_page_browser(url: str) -> str:
+    print("  ↳ static fetch too thin — launching headless browser…")
+    driver = _get_driver()
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=20)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "lxml")
-        # strip noise
-        for tag in soup(["script", "style", "nav", "footer", "header", "svg", "img"]):
-            tag.decompose()
-        text = " ".join(soup.get_text(separator=" ", strip=True).split())
-        return text[:8000]
+        driver.get(url)
+        time.sleep(4)          # wait for JS to render
+        return _extract_text(driver.page_source)
+    finally:
+        driver.quit()
+
+def fetch_page(url: str) -> str:
+    """Try a fast static fetch first; fall back to headless browser if the page is JS-rendered."""
+    try:
+        text = fetch_page_static(url)
+        if len(text) >= MIN_TEXT_LEN:
+            return text
+        print(f"  ⚠ static fetch only got {len(text)} chars for {url}")
     except Exception as e:
-        print(f"  ⚠ fetch failed for {url}: {e}")
+        print(f"  ⚠ static fetch failed ({e}) — trying browser…")
+
+    try:
+        text = fetch_page_browser(url)
+        print(f"  ✓ browser fetch got {len(text)} chars")
+        return text
+    except Exception as e:
+        print(f"  ⚠ browser fetch also failed: {e}")
         return ""
 
 
