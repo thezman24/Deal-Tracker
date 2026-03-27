@@ -5,7 +5,7 @@
     "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
     "type": "item",
     "notes": "Alert me if under $37.99"
-  }
+  },
   {
     "id": "new-era-baseball",
     "name": "New Era Baseball",
@@ -40,14 +40,14 @@
     "url": "https://www.nike.com/w/sale",
     "type": "store",
     "notes": "Anything over 40% off"
-  }
+  },
   {
     "id": "best-buy-sale",
     "name": "Best Buy",
     "url": "https://www.bestbuy.com/top-deals",
     "type": "store",
     "notes": "Anything over 40% off"
-  }
+  },
   {
     "id": "fanatics-baseball",
     "name": "Fanatics MLB",
@@ -61,7 +61,7 @@
     "url": "https://www.47brand.com/collections/sale",
     "type": "store",
     "notes": "Looking for any discount of more than 30%, especially on hats"
-  }
+  },
     {
     "id": "Vans",
     "name": "Vans",
@@ -75,14 +75,14 @@
     "url": "https://www.adidas.com/us/sale",
     "type": "store",
     "notes": "Looking for any discount over 40%"
-  }
+  },
   {
     "id": "fanatics-football",
     "name": "Fanatics NFL",
     "url": "https://www.fanatics.com/nfl/sale-items/o-1383+os-45+z-91438378-2717467054?_ref=m-TOPNAV",
     "type": "store",
     "notes": "Looking for any discount on any merchandise for Arizona sports teams"
-  }
+  },
   {
     "id": "fanatics-basketball",
     "name": "Fanatics NBA",
