@@ -8,22 +8,22 @@
   },
   {
     "id": "new-era-baseball",
-    "name": "New Era Baseball",
-    "url": "https://www.neweracap.com/collections/mlb-sale",
+    "name": "New Era DBacks",
+    "url": "https://www.neweracap.com/collections/mlb-sale?filter.p.m.my_fields.team=Arizona+Diamondbacks&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats"
   },
    {
     "id": "new-era-football",
-    "name": "New Era Football",
-    "url": "https://www.neweracap.com/collections/nfl-sale",
+    "name": "New Era Cardinals",
+    "url": "https://www.neweracap.com/collections/nfl-sale?filter.p.m.my_fields.team=Arizona+Cardinals&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats"
   },
    {
     "id": "new-era-basketball",
-    "name": "New Era Basketball",
-    "url": "https://www.neweracap.com/collections/nba-sale",
+    "name": "New Era Suns",
+    "url": "https://www.neweracap.com/collections/nba-sale?filter.p.m.my_fields.team=Phoenix+Suns&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 30%, especially on hats"
   },
@@ -50,10 +50,10 @@
   },
   {
     "id": "fanatics-baseball",
-    "name": "Fanatics MLB",
-    "url": "https://www.fanatics.com/mlb/sale-items/o-3487+os-78+z-8052736-97589246?_ref=m-TOPNAV",
+    "name": "Fanatics DBacks",
+    "url": "https://www.fanatics.com/mlb/sale-items/o-3487+os-78+z-8052736-97589246?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223074%22%5D%7D",
     "type": "store",
-    "notes": "Looking for any discount on any merchandise for Arizona sports teams"
+    "notes": "Looking for any discount over 40%"
   },
   {
     "id": "47",
@@ -78,16 +78,16 @@
   },
   {
     "id": "fanatics-football",
-    "name": "Fanatics NFL",
-    "url": "https://www.fanatics.com/nfl/sale-items/o-1383+os-45+z-91438378-2717467054?_ref=m-TOPNAV",
+    "name": "Fanatics Cardinals",
+    "url": "https://www.fanatics.com/nfl/sale-items/o-1383+os-45+z-91438378-2717467054?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223418%22%5D%7D",
     "type": "store",
-    "notes": "Looking for any discount on any merchandise for Arizona sports teams"
+    "notes": "Looking for any discount over 40%"
   },
   {
     "id": "fanatics-basketball",
-    "name": "Fanatics NBA",
-    "url": "https://www.fanatics.com/nba/sale-items/o-3536+os-45+z-94759805-345224176?_ref=m-TOPNAV",
+    "name": "Fanatics Suns",
+    "url": "https://www.fanatics.com/nba/sale-items/o-3536+os-45+z-94759805-345224176?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223382%22%5D%7D",
     "type": "store",
-    "notes": "Looking for any discount on any merchandise for Phoenix sports teams"
+    "notes": "Looking for any discount over 40%"
   }
 ]
