@@ -55,13 +55,15 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-MIN_TEXT_LEN = 200   # if static fetch returns less than this, try the browser
+MIN_TEXT_LEN  = 400    # chars — below this we assume the page is JS-rendered
+MAX_TEXT_LEN  = 20000  # chars sent to Claude (raised from 8000)
 
 def _extract_text(html: str) -> str:
     soup = BeautifulSoup(html, "lxml")
-    for tag in soup(["script", "style", "nav", "footer", "header", "svg", "img"]):
+    for tag in soup(["script", "style", "nav", "footer", "header", "svg", "img", "noscript"]):
         tag.decompose()
-    return " ".join(soup.get_text(separator=" ", strip=True).split())[:8000]
+    text = " ".join(soup.get_text(separator=" ", strip=True).split())
+    return text[:MAX_TEXT_LEN]
 
 def fetch_page_static(url: str) -> str:
     resp = requests.get(url, headers=HEADERS, timeout=20)
@@ -69,22 +71,39 @@ def fetch_page_static(url: str) -> str:
     return _extract_text(resp.text)
 
 def fetch_page_browser(url: str) -> str:
-    print("  ↳ static fetch too thin — launching headless browser…")
+    print("  ↳ launching headless browser…")
     driver = _get_driver()
     try:
         driver.get(url)
-        time.sleep(4)          # wait for JS to render
-        return _extract_text(driver.page_source)
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight / 2);")
+        time.sleep(5)
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+        text = _extract_text(driver.page_source)
+        return text
     finally:
         driver.quit()
 
-def fetch_page(url: str) -> str:
-    """Try a fast static fetch first; fall back to headless browser if the page is JS-rendered."""
+def fetch_page(url: str, item_type: str = "item") -> str:
+    """
+    Store pages almost always need a real browser (JS-rendered grids).
+    Item pages try static first, fall back to browser if too thin.
+    """
+    if item_type == "store":
+        try:
+            text = fetch_page_browser(url)
+            print(f"  ✓ browser fetch got {len(text)} chars")
+            return text
+        except Exception as e:
+            print(f"  ⚠ browser fetch failed: {e}")
+            return ""
+
     try:
         text = fetch_page_static(url)
         if len(text) >= MIN_TEXT_LEN:
+            print(f"  ✓ static fetch got {len(text)} chars")
             return text
-        print(f"  ⚠ static fetch only got {len(text)} chars for {url}")
+        print(f"  ⚠ static fetch only got {len(text)} chars — trying browser…")
     except Exception as e:
         print(f"  ⚠ static fetch failed ({e}) — trying browser…")
 
@@ -97,55 +116,86 @@ def fetch_page(url: str) -> str:
         return ""
 
 
+EMPTY_RESULT = {
+    "current_price": None, "original_price": None,
+    "discount_pct": None, "store_wide_deals": [], "item_deals": [],
+    "is_on_sale": False, "summary": "No data"
+}
+
 def ask_claude(page_text: str, item: dict) -> dict:
     """Use Claude to extract deal/price info from raw page text."""
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
+    if not page_text.strip():
+        print("  ⚠ empty page text — skipping Claude call")
+        return {**EMPTY_RESULT, "summary": "Page could not be loaded"}
+
     context = (
         f"Store/item name: {item['name']}\n"
         f"URL: {item['url']}\n"
-        f"Type: {item['type']}\n"
+        f"Type: {item['type']} ('store' = listing page with many items, 'item' = single product page)\n"
     )
     if item.get("notes"):
-        context += f"User notes: {item['notes']}\n"
+        context += f"User instructions: {item['notes']}\n"
 
-    prompt = f"""You are a deal-detection assistant. Analyse the page text below and extract pricing and promotion information.
+    prompt = f"""You are a deal-detection assistant. Extract pricing and promotion data from the page text below.
 
 {context}
+
+RULES:
+- For a STORE page: look for sale banners, promo codes, % off sitewide offers, and list up to 5 of the best individual item deals you can find with their prices.
+- For an ITEM page: find the current price, original/crossed-out price, and any discount shown.
+- is_on_sale must be true if ANY discount, sale price, or promo exists.
+- discount_pct should be an integer (e.g. 30), not a string.
+- If you cannot find price info, still return valid JSON with nulls and empty arrays.
+- Your ENTIRE response must be a single JSON object. Do not include any text before or after it.
 
 PAGE TEXT:
 {page_text}
 
-Return ONLY valid JSON with no markdown fences:
+Respond with ONLY this JSON structure, no markdown, no explanation:
 {{
-  "current_price": "e.g. $49.99 or null if not found",
+  "current_price": "e.g. $49.99 or null",
   "original_price": "e.g. $79.99 or null",
-  "discount_pct": "e.g. 37 (integer) or null",
+  "discount_pct": null,
   "store_wide_deals": [
-    {{"title": "...", "description": "...", "code": "promo code or null"}}
+    {{"title": "short title", "description": "details", "code": "PROMO or null"}}
   ],
   "item_deals": [
-    {{"title": "...", "description": "...", "discount": "e.g. $30 OFF"}}
+    {{"title": "item name", "description": "details", "discount": "e.g. $30 OFF or 40% off"}}
   ],
-  "is_on_sale": true,
-  "summary": "one sentence"
-}}
-If the page text is empty or unreadable, return the schema with all nulls/empty arrays and is_on_sale: false."""
+  "is_on_sale": false,
+  "summary": "one sentence describing what deals exist or why none were found"
+}}"""
 
-    msg = client.messages.create(
-        model="claude-haiku-4-5-20251001",   # haiku → cheapest, fast enough
-        max_tokens=800,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    raw = msg.content[0].text.strip().replace("```json", "").replace("```", "").strip()
-    try:
-        return json.loads(raw)
-    except json.JSONDecodeError:
-        return {
-            "current_price": None, "original_price": None,
-            "discount_pct": None, "store_wide_deals": [], "item_deals": [],
-            "is_on_sale": False, "summary": "Parse error"
-        }
+    for attempt in range(2):
+        msg = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1200,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = msg.content[0].text.strip()
+        # strip any accidental markdown fences
+        raw = raw.replace("```json", "").replace("```", "").strip()
+        # if Claude added text before the JSON, find the first {
+        brace = raw.find("{")
+        if brace > 0:
+            print(f"  ⚠ Claude added {brace} chars of preamble — stripping")
+            raw = raw[brace:]
+        try:
+            result = json.loads(raw)
+            # ensure required keys exist
+            for k, v in EMPTY_RESULT.items():
+                result.setdefault(k, v)
+            return result
+        except json.JSONDecodeError as e:
+            print(f"  ⚠ JSON parse failed (attempt {attempt+1}): {e}")
+            print(f"  ⚠ Claude returned: {raw[:300]}")
+            if attempt == 0:
+                # retry once with a stricter instruction prepended
+                prompt = "Respond with ONLY a JSON object, absolutely no other text.\n\n" + prompt
+
+    return {**EMPTY_RESULT, "summary": "Could not parse AI response"}
 
 
 # ── email ─────────────────────────────────────────────────────────────────────
@@ -239,7 +289,7 @@ def main():
     for item in watchlist:
         iid = item["id"]
         print(f"\n→ Scanning: {item['name']} ({item['url']})")
-        page = fetch_page(item["url"])
+        page = fetch_page(item["url"], item_type=item.get("type", "item"))
         time.sleep(1)   # be polite
 
         ai = ask_claude(page, item)
