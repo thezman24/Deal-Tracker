@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Tracker</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300;9..144,600&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0f10;--surface:#161a1c;--surface2:#1e2326;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);
+  --text:#e8ebe6;--muted:#7a8a7f;
+  --accent:#a8e063;--accent2:#5de8b5;--warn:#f4a942;--danger:#f06060;
+  --mono:'DM Mono',monospace;--serif:'Fraunces',serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;min-height:100vh}
+
+/* ── header ── */
+header{padding:2rem 2rem 1.2rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+header h1{font-family:var(--serif);font-size:2rem;font-weight:300;letter-spacing:-0.02em;color:var(--accent);line-height:1}
+header p{color:var(--muted);font-size:12px;margin-top:4px}
+.stats{display:flex;gap:1.5rem;margin-left:auto;flex-wrap:wrap}
+.stat .num{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--accent2)}
+.stat .lbl{font-size:11px;color:var(--muted);margin-top:2px;text-align:right}
+.last-scan{font-size:11px;color:var(--muted);margin-left:auto;align-self:center}
+
+/* ── tabs ── */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);padding:0 2rem}
+.tab{padding:10px 18px;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-family:var(--mono);font-size:13px;cursor:pointer;transition:all .15s}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab:hover{color:var(--text)}
+
+/* ── main grid ── */
+.content{padding:2rem;max-width:1200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.25rem}
+
+/* ── cards ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;transition:border-color .15s}
+.card:hover{border-color:var(--border2)}
+.card.on-sale{border-left:3px solid var(--warn)}
+.card.no-deal{border-left:3px solid var(--border)}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;margin-bottom:.75rem}
+.card-name{font-size:15px;font-weight:500;color:var(--text);line-height:1.3}
+.card-url{font-size:11px;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:220px}
+.card-url a{color:var(--accent2);text-decoration:none}
+.price-block{text-align:right;flex-shrink:0}
+.price-now{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--accent2)}
+.price-was{font-size:12px;color:var(--muted);text-decoration:line-through;margin-top:2px}
+.pct-badge{display:inline-block;background:rgba(244,169,66,.15);color:var(--warn);font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;margin-top:4px}
+
+.deal-section{margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--border)}
+.deal-section-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.deal-row{font-size:12px;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border);line-height:1.4}
+.deal-row:last-child{border-bottom:none}
+.deal-row .dt{color:var(--muted);font-size:11px}
+.deal-tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;margin-right:4px;font-weight:500}
+.tag-store{background:rgba(93,232,181,.1);color:var(--accent2)}
+.tag-item{background:rgba(168,224,99,.1);color:var(--accent)}
+
+.card-summary{font-size:12px;color:var(--muted);margin-top:.6rem;line-height:1.5}
+.card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--border)}
+.scan-ago{font-size:11px;color:var(--muted)}
+
+/* ── history tab ── */
+.history-table{width:100%;border-collapse:collapse;font-size:13px}
+.history-table th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--border);font-weight:400}
+.history-table td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--text)}
+.history-table tr:hover td{background:var(--surface)}
+.pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500}
+.pill-sale{background:rgba(244,169,66,.12);color:var(--warn)}
+.pill-none{background:rgba(122,138,127,.1);color:var(--muted)}
+
+/* ── watchlist editor ── */
+.editor-note{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;margin-bottom:1.5rem;font-size:13px;color:var(--muted);line-height:1.7}
+.editor-note code{background:var(--surface2);padding:2px 6px;border-radius:4px;font-size:12px;color:var(--accent)}
+textarea.json-editor{width:100%;min-height:380px;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:13px;padding:1rem;border-radius:8px;resize:vertical;outline:none;line-height:1.6}
+textarea.json-editor:focus{border-color:var(--accent)}
+.btn-row{display:flex;gap:10px;margin-top:12px}
+.btn{padding:9px 20px;border-radius:6px;font-family:var(--mono);font-size:13px;cursor:pointer;transition:all .15s;border:1px solid}
+.btn-primary{background:var(--accent);color:#0d0f10;border-color:var(--accent)}
+.btn-primary:hover{opacity:.85}
+.btn-ghost{background:none;color:var(--muted);border-color:var(--border)}
+.btn-ghost:hover{color:var(--text);border-color:var(--border2)}
+.save-msg{font-size:12px;color:var(--accent2);margin-top:8px;opacity:0;transition:opacity .3s}
+.save-msg.show{opacity:1}
+
+/* ── empty / loading ── */
+.loading{text-align:center;padding:4rem;color:var(--muted)}
+.loading .spin{font-size:2rem;display:inline-block;animation:spin 1s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.empty{text-align:center;padding:4rem;color:var(--muted)}
+.empty .big{font-family:var(--serif);font-size:3.5rem;color:var(--border2);display:block;margin-bottom:1rem}
+
+/* ── notif ── */
+.notif{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--surface2);border:1px solid var(--warn);border-radius:10px;padding:1rem 1.25rem;max-width:320px;box-shadow:0 8px 30px rgba(0,0,0,.5);animation:slidein .3s ease;z-index:100}
+.notif-title{font-size:12px;color:var(--warn);font-weight:500;margin-bottom:4px}
+.notif-body{font-size:12px;color:var(--muted);line-height:1.5}
+.notif-close{position:absolute;top:8px;right:10px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px}
+@keyframes slidein{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+@media(max-width:600px){.grid{grid-template-columns:1fr}.stats{gap:1rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Deal Tracker</h1>
+    <p>Automated daily price &amp; deal monitor</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="num" id="s-tracked">–</div><div class="lbl">tracked</div></div>
+    <div class="stat"><div class="num" id="s-deals">–</div><div class="lbl">on sale now</div></div>
+  </div>
+  <div class="last-scan" id="last-scan-time"></div>
+</header>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('deals')">Active Deals</button>
+  <button class="tab" onclick="showTab('all')">All Tracked</button>
+  <button class="tab" onclick="showTab('history')">Price History</button>
+  <button class="tab" onclick="showTab('watchlist')">Edit Watchlist</button>
+</div>
+
+<div class="content">
+  <div id="tab-deals"></div>
+  <div id="tab-all" style="display:none"></div>
+  <div id="tab-history" style="display:none"></div>
+  <div id="tab-watchlist" style="display:none"></div>
+</div>
+
+<script>
+// ── config ───────────────────────────────────────────────────────────────────
+// When hosted on GitHub Pages this resolves to the same repo's /data/ folder.
+// Change this if you host the data elsewhere.
+const BASE = './data';
+
+let results  = [];
+let history  = [];
+let watchlist = [];
+let activeTab = 'deals';
+
+// ── boot ──────────────────────────────────────────────────────────────────────
+async function load() {
+  showLoading('tab-deals');
+  try {
+    [results, history, watchlist] = await Promise.all([
+      fetchJSON(`${BASE}/results.json`),
+      fetchJSON(`${BASE}/history.json`),
+      fetchJSON(`${BASE}/watchlist.json`),
+    ]);
+  } catch(e) {
+    document.getElementById('tab-deals').innerHTML =
+      `<div class="empty"><span class="big">◈</span>Could not load data.<br><small>${e.message}</small></div>`;
+    return;
+  }
+  updateStats();
+  renderTab(activeTab);
+  checkNewDeals();
+}
+
+async function fetchJSON(url) {
+  const r = await fetch(url + '?t=' + Date.now());
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText} (${url})`);
+  return r.json();
+}
+
+// ── stats ─────────────────────────────────────────────────────────────────────
+function updateStats() {
+  document.getElementById('s-tracked').textContent = results.length;
+  document.getElementById('s-deals').textContent   = results.filter(r => r.is_on_sale).length;
+  const latest = results.map(r => r.last_scan).filter(Boolean).sort().pop();
+  if (latest) {
+    document.getElementById('last-scan-time').textContent =
+      'Last scan: ' + new Date(latest).toLocaleString();
+  }
+}
+
+// ── tabs ──────────────────────────────────────────────────────────────────────
+function showTab(name) {
+  activeTab = name;
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.toggle('active', ['deals','all','history','watchlist'][i] === name);
+  });
+  ['deals','all','history','watchlist'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? '' : 'none';
+  });
+  renderTab(name);
+}
+
+function renderTab(name) {
+  if (name === 'deals')     renderDeals();
+  if (name === 'all')       renderAll();
+  if (name === 'history')   renderHistory();
+  if (name === 'watchlist') renderWatchlist();
+}
+
+// ── deal cards ────────────────────────────────────────────────────────────────
+function cardHTML(item) {
+  const sw = item.store_wide_deals || [];
+  const id = item.item_deals || [];
+  const hasDeal = item.is_on_sale;
+
+  const swHTML = sw.length ? `
+    <div class="deal-section">
+      <div class="deal-section-label">Store-wide</div>
+      ${sw.map(d => `<div class="deal-row"><span class="deal-tag tag-store">promo</span><strong>${d.title}</strong><br><span class="dt">${d.description}${d.code ? ` — code: <strong>${d.code}</strong>` : ''}</span></div>`).join('')}
+    </div>` : '';
+
+  const idHTML = id.length ? `
+    <div class="deal-section">
+      <div class="deal-section-label">Item discounts</div>
+      ${id.map(d => `<div class="deal-row"><span class="deal-tag tag-item">deal</span><strong>${d.title}</strong><br><span class="dt">${d.description}${d.discount ? ` · ${d.discount}` : ''}</span></div>`).join('')}
+    </div>` : '';
+
+  const ago = item.last_scan ? timeAgo(item.last_scan) : 'never';
+
+  return `<div class="card ${hasDeal ? 'on-sale' : 'no-deal'}">
+    <div class="card-top">
+      <div>
+        <div class="card-name">${item.name}</div>
+        <div class="card-url"><a href="${item.url}" target="_blank">${item.url}</a></div>
+      </div>
+      <div class="price-block">
+        ${item.current_price ? `<div class="price-now">${item.current_price}</div>` : ''}
+        ${item.original_price ? `<div class="price-was">${item.original_price}</div>` : ''}
+        ${item.discount_pct ? `<div class="pct-badge">–${item.discount_pct}%</div>` : ''}
+      </div>
+    </div>
+    ${item.summary ? `<div class="card-summary">${item.summary}</div>` : ''}
+    ${swHTML}${idHTML}
+    <div class="card-footer">
+      <span class="scan-ago">Scanned ${ago}</span>
+    </div>
+  </div>`;
+}
+
+function renderDeals() {
+  const on = results.filter(r => r.is_on_sale);
+  const el = document.getElementById('tab-deals');
+  if (!on.length) {
+    el.innerHTML = `<div class="empty"><span class="big">◉</span>No active deals right now.<br><small>The scraper runs daily — check back tomorrow.</small></div>`;
+    return;
+  }
+  el.innerHTML = `<div class="grid">${on.map(cardHTML).join('')}</div>`;
+}
+
+function renderAll() {
+  const el = document.getElementById('tab-all');
+  if (!results.length) {
+    el.innerHTML = `<div class="empty"><span class="big">◈</span>No items tracked yet.<br><small>Add some in the Edit Watchlist tab.</small></div>`;
+    return;
+  }
+  el.innerHTML = `<div class="grid">${results.map(cardHTML).join('')}</div>`;
+}
+
+// ── history ───────────────────────────────────────────────────────────────────
+function renderHistory() {
+  const el = document.getElementById('tab-history');
+  if (!history.length) {
+    el.innerHTML = `<div class="empty"><span class="big">◉</span>No history yet.</div>`;
+    return;
+  }
+  const rows = [...history].reverse().slice(0, 200);
+  el.innerHTML = `<table class="history-table">
+    <thead><tr><th>Item</th><th>Price</th><th>Discount</th><th>Status</th><th>When</th></tr></thead>
+    <tbody>${rows.map(h => `<tr>
+      <td>${h.name}</td>
+      <td>${h.price || '–'}</td>
+      <td>${h.discount_pct ? h.discount_pct + '%' : '–'}</td>
+      <td><span class="pill ${h.is_on_sale ? 'pill-sale' : 'pill-none'}">${h.is_on_sale ? 'On sale' : 'Full price'}</span></td>
+      <td>${new Date(h.ts).toLocaleString()}</td>
+    </tr>`).join('')}</tbody>
+  </table>`;
+}
+
+// ── watchlist editor ──────────────────────────────────────────────────────────
+function renderWatchlist() {
+  const el = document.getElementById('tab-watchlist');
+  el.innerHTML = `
+    <div class="editor-note">
+      Edit your watchlist below as JSON, then click <strong>Download watchlist.json</strong> and commit the file to your repo's <code>data/watchlist.json</code>.
+      The scraper will pick it up on the next run.<br><br>
+      <strong>Fields:</strong> <code>id</code> (unique string), <code>name</code>, <code>url</code>, <code>type</code> (<code>"store"</code> or <code>"item"</code>), <code>notes</code> (optional).
+    </div>
+    <textarea class="json-editor" id="wl-editor">${JSON.stringify(watchlist, null, 2)}</textarea>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="downloadWatchlist()">↓ Download watchlist.json</button>
+      <button class="btn btn-ghost" onclick="validateJSON()">Validate JSON</button>
+    </div>
+    <div class="save-msg" id="save-msg"></div>
+  `;
+}
+
+function validateJSON() {
+  const raw = document.getElementById('wl-editor').value;
+  const msg = document.getElementById('save-msg');
+  try {
+    JSON.parse(raw);
+    msg.textContent = '✓ Valid JSON';
+    msg.style.color = 'var(--accent2)';
+    msg.classList.add('show');
+    setTimeout(() => msg.classList.remove('show'), 2500);
+  } catch(e) {
+    msg.textContent = '✗ ' + e.message;
+    msg.style.color = 'var(--danger)';
+    msg.classList.add('show');
+  }
+}
+
+function downloadWatchlist() {
+  const raw = document.getElementById('wl-editor').value;
+  try {
+    JSON.parse(raw);
+  } catch(e) {
+    alert('Invalid JSON: ' + e.message);
+    return;
+  }
+  const blob = new Blob([raw], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'watchlist.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ── deal notifications ────────────────────────────────────────────────────────
+function checkNewDeals() {
+  const onSale = results.filter(r => r.is_on_sale);
+  if (!onSale.length) return;
+  const seen = JSON.parse(localStorage.getItem('seen-deals') || '[]');
+  const fresh = onSale.filter(r => !seen.includes(r.id));
+  if (!fresh.length) return;
+
+  fresh.forEach(r => seen.push(r.id));
+  localStorage.setItem('seen-deals', JSON.stringify(seen));
+
+  const el = document.createElement('div');
+  el.className = 'notif';
+  el.innerHTML = `
+    <button class="notif-close" onclick="this.parentElement.remove()">✕</button>
+    <div class="notif-title">◉ ${fresh.length} new deal${fresh.length > 1 ? 's' : ''} found</div>
+    <div class="notif-body">${fresh.map(r => r.name + (r.discount_pct ? ` (–${r.discount_pct}%)` : '')).join('<br>')}</div>
+  `;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 8000);
+}
+
+// ── utils ──────────────────────────────────────────────────────────────────────
+function timeAgo(iso) {
+  const diff = Date.now() - new Date(iso).getTime();
+  const h = Math.floor(diff / 3600000);
+  if (h < 1) return 'just now';
+  if (h < 24) return h + 'h ago';
+  return Math.floor(h / 24) + 'd ago';
+}
+
+function showLoading(id) {
+  document.getElementById(id).innerHTML = `<div class="loading"><div class="spin">◌</div><br>Loading…</div>`;
+}
+
+load();
+</script>
+</body>
+</html>
