@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "my-first-item",
+    "name": "Mammoth Hat",
+    "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
+    "type": "item",
+    "notes": "Alert me if under $37.99",
+    "last_scan": "2026-03-27T20:40:48.557333+00:00",
+    "current_price": "$37.99",
+    "original_price": null,
+    "discount_pct": null,
+    "store_wide_deals": [
+      {
+        "title": "Up to 45% off select styles",
+        "description": "Up to 45% off select styles",
+        "code": null
+      },
+      {
+        "title": "30% off select Alpha Industries styles",
+        "description": "30% off select Alpha Industries styles",
+        "code": null
+      },
+      {
+        "title": "Free shipping",
+        "description": "Add $100.00 and get free shipping",
+        "code": null
+      },
+      {
+        "title": "Free Mini Cap",
+        "description": "Free Mini Cap over $100",
+        "code": null
+      }
+    ],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "Erie Moon Mammoths Black 9SEVENTY Stretch-Snap Hat is priced at $37.99, meeting the user's alert threshold exactly."
+  }
+]

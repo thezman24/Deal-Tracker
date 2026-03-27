@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "my-first-item",
+    "name": "Mammoth Hat",
+    "ts": "2026-03-27T20:40:48.557333+00:00",
+    "price": "$37.99",
+    "discount_pct": null,
+    "is_on_sale": false
+  }
+]
