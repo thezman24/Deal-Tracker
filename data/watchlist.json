@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": "my-first-item",
+    "name": "Mammoth Hat",
+    "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
+    "type": "item",
+    "notes": "Alert me if under $37.99"
+  }
+]
