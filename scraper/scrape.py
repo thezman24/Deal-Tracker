@@ -162,7 +162,7 @@ Respond with ONLY this JSON structure, no markdown, no explanation:
     {{"title": "short title", "description": "details", "code": "PROMO or null"}}
   ],
   "item_deals": [
-    {{"title": "item name", "description": "details", "discount": "e.g. $30 OFF or 40% off"}}
+    {{"title": "item name", "description": "details", "discount": "e.g. $30 OFF or 40% off", "url": "absolute product URL if visible in the page text, or null"}}
   ],
   "is_on_sale": false,
   "summary": "one sentence describing what deals exist or why none were found"
@@ -213,27 +213,64 @@ def send_email(new_deals: list[dict]):
         return
 
     lines_plain = []
-    lines_html  = ["<h2 style='color:#c47a1e'>🏷️ New deals found!</h2><ul>"]
+    lines_html  = ["""
+<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px">
+<h2 style="color:#c47a1e;margin-bottom:16px">🏷️ New deals found!</h2>
+"""]
 
     for d in new_deals:
-        name = d["name"]
+        name   = d["name"]
+        url    = d.get("url", "")
         summary = d.get("summary", "")
-        sw = d.get("store_wide_deals", [])
-        it = d.get("item_deals", [])
-        lines_plain.append(f"\n{name}")
+        sw     = d.get("store_wide_deals", [])
+        it     = d.get("item_deals", [])
+
+        # plain text
+        lines_plain.append(f"\n{'='*40}")
+        lines_plain.append(f"{name}")
+        if url:
+            lines_plain.append(f"  {url}")
         lines_plain.append(f"  {summary}")
         for deal in sw:
             lines_plain.append(f"  [STORE-WIDE] {deal['title']}: {deal['description']}")
         for deal in it:
-            lines_plain.append(f"  [ITEM]       {deal['title']}: {deal.get('discount','')}")
-        lines_html.append(
-            f"<li><strong>{name}</strong> — {summary}"
-            + ("".join(f"<br>&nbsp;&nbsp;🏪 {x['title']}: {x['description']}" for x in sw))
-            + ("".join(f"<br>&nbsp;&nbsp;🎯 {x['title']}: {x.get('discount','')}" for x in it))
-            + "</li>"
-        )
+            item_url = deal.get("url") or url
+            lines_plain.append(f"  [ITEM] {deal['title']}: {deal.get('discount','')}  →  {item_url}")
 
-    lines_html.append("</ul>")
+        # html
+        store_link = f'<a href="{url}" style="color:#5de8b5">{name}</a>' if url else name
+        sw_html = ""
+        for x in sw:
+            sw_html += (
+                f'<div style="margin:6px 0 2px;padding:8px 12px;background:#fff8ee;border-left:3px solid #f4a942;border-radius:4px">' 
+                f'<span style="font-size:11px;text-transform:uppercase;color:#888">Store-wide</span><br>' 
+                f'<strong>{x["title"]}</strong>: {x["description"]}' 
+                + (f' &nbsp;<code style="background:#f0f0f0;padding:2px 6px;border-radius:3px">{x["code"]}</code>' if x.get("code") else "")
+                + "</div>"
+            )
+        it_html = ""
+        for x in it:
+            item_url = x.get("url") or url
+            link_open  = f'<a href="{item_url}" style="color:#0066cc;text-decoration:none">' if item_url else ""
+            link_close = "</a>" if item_url else ""
+            it_html += (
+                f'<div style="margin:6px 0 2px;padding:8px 12px;background:#f0faf4;border-left:3px solid #a8e063;border-radius:4px">' 
+                f'<span style="font-size:11px;text-transform:uppercase;color:#888">Item deal</span><br>' 
+                f'{link_open}<strong>{x["title"]}</strong>{link_close}' 
+                + (f' &nbsp;<span style="color:#d44">{x.get("discount","")}</span>' if x.get("discount") else "")
+                + (f'<br><span style="font-size:12px;color:#888">{x["description"]}</span>' if x.get("description") else "")
+                + "</div>"
+            )
+
+        lines_html.append(f"""
+<div style="margin-bottom:24px;padding:16px;border:1px solid #e0e0e0;border-radius:8px">
+  <h3 style="margin:0 0 4px">{store_link}</h3>
+  <p style="margin:0 0 10px;color:#666;font-size:13px">{summary}</p>
+  {sw_html}
+  {it_html}
+</div>""")
+
+    lines_html.append("</div>")
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"Deal Tracker — {len(new_deals)} new deal(s) found"
