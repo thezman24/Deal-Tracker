@@ -5,7 +5,7 @@
     "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
     "type": "item",
     "notes": "Alert me if under $37.99",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": "$37.99",
     "original_price": null,
     "discount_pct": null,
@@ -17,23 +17,23 @@
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Discount on Alpha Industries branded items",
+        "description": "Discount on Alpha Industries brand items",
         "code": null
       },
       {
         "title": "Free shipping over $100",
-        "description": "Free shipping when you spend $100 or more",
+        "description": "Free shipping threshold at $100 purchase",
         "code": null
       },
       {
-        "title": "Free Mini Cap with purchase over $100",
-        "description": "Gift with purchase promotion",
+        "title": "Free Mini Cap gift with purchase over $100",
+        "description": "Free New Era Cap Mini 59FIFTY with orders over $100",
         "code": null
       }
     ],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "The Erie Moon Mammoths hat is priced at $37.99 with no item-specific discount, meeting the user's alert threshold exactly but not falling below it."
+    "summary": "The Erie Moon Mammoths hat is priced at $37.99 with no direct item discount, meeting the user's alert threshold of under $37.99 exactly at the limit."
   },
   {
     "id": "dbacks-hat",
@@ -41,7 +41,7 @@
     "url": "https://www.neweracap.com/products/arizona-diamondbacks-gore-tex-white-9seventy-stretch-snap?_pos=4&_fid=84b930053&_ss=c",
     "type": "item",
     "notes": "Alert me if under $79.99",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": "$79.99",
     "original_price": null,
     "discount_pct": null,
@@ -53,23 +53,18 @@
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Category-specific discount on Alpha Industries items",
+        "description": "Specific discount on Alpha Industries brand items",
         "code": null
       },
       {
-        "title": "Free shipping over $100",
-        "description": "Free shipping when spending $100 or more",
-        "code": null
-      },
-      {
-        "title": "Free Mini Cap gift with purchase",
-        "description": "Free New Era Cap Mini 59FIFTY Fitted Hat when spending $100 or more",
+        "title": "Free shipping with $100 purchase",
+        "description": "Free shipping threshold at $100 spend",
         "code": null
       }
     ],
     "item_deals": [],
     "is_on_sale": false,
-    "summary": "The DBacks Hat is priced at $79.99 with no direct discount applied, meeting the user's under $79.99 alert threshold exactly but not triggering it; sitewide promotions exist but do not apply to this item."
+    "summary": "The DBacks Hat is priced at $79.99 with no direct discount applied, meeting the user's alert threshold of under $79.99 exactly at the limit."
   },
   {
     "id": "Cardinals-hat",
@@ -77,7 +72,7 @@
     "url": "https://www.neweracap.com/products/arizona-cardinals-2025-training-9forty-m-crown-a-frame-snapback-hat?_pos=56&_fid=772da3eba&_ss=c",
     "type": "item",
     "notes": "Alert me if under $31.19",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": "$31.19",
     "original_price": "$47.99",
     "discount_pct": 35,
@@ -93,26 +88,26 @@
         "code": null
       },
       {
-        "title": "Free shipping",
-        "description": "Free shipping when you spend $100.00 or more",
+        "title": "Free shipping on orders over $100",
+        "description": "Free shipping threshold promotion",
         "code": null
       },
       {
-        "title": "Free Mini Cap",
-        "description": "Gift with purchase - free New Era Cap Mini 59FIFTY Fitted Hat when you spend $100.00 or more",
+        "title": "Free Mini Cap with purchase over $100",
+        "description": "Gift with purchase promotion",
         "code": null
       }
     ],
     "item_deals": [
       {
         "title": "Arizona Cardinals 2025 Training 9FORTY M-Crown A-Frame Snapback Hat",
-        "description": "Sale price of $31.19, reduced from $47.99",
-        "discount": "$16.80 off (35% off)",
+        "description": "Sale price $31.19, originally $47.99",
+        "discount": "$16.80 OFF (35% off)",
         "url": "https://www.neweracap.com/products/arizona-cardinals-2025-training-9forty-m-crown-a-frame-snapback-hat?_pos=56&_fid=772da3eba&_ss=c"
       }
     ],
     "is_on_sale": true,
-    "summary": "The Cardinals hat is on sale at $31.19 (originally $47.99), which meets your alert threshold of under $31.19 by exactly matching it, with additional sitewide promotions and free shipping available over $100."
+    "summary": "Cardinals hat is currently on sale for $31.19 (35% off original $47.99), meeting the user's under $31.19 alert threshold exactly at the target price."
   },
   {
     "id": "new-era-baseball",
@@ -120,61 +115,61 @@
     "url": "https://www.neweracap.com/collections/mlb-sale?filter.p.m.my_fields.team=Arizona+Diamondbacks&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 50%, especially on hats",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
         "title": "Up to 45% off select styles",
-        "description": "Sitewide sale on select MLB items",
+        "description": "Sitewide promotion on select MLB apparel and headwear",
         "code": null
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Specific discount on Alpha Industries branded items",
+        "description": "Promotion on Alpha Industries branded items",
         "code": null
       },
       {
         "title": "Free shipping over $100",
-        "description": "Free shipping when you spend $100 or more",
+        "description": "Free shipping on orders $100 and above",
         "code": null
       }
     ],
     "item_deals": [
       {
         "title": "Arizona Diamondbacks Three Looms Wool Pinstripe 9TWENTY A-Frame Adjustable",
-        "description": "Original: $55.99, Sale: $30.79",
+        "description": "Original: $55.99 | Sale: $30.79 | Savings: 45%",
         "discount": "45% off",
         "url": null
       },
       {
         "title": "Arizona Diamondbacks Three Looms Wool Pinstripe Retro Crown 9FIFTY Adjustable",
-        "description": "Original: $55.99, Sale: $30.79",
-        "discount": "45% off",
-        "url": null
-      },
-      {
-        "title": "Arizona Diamondbacks Three Looms Wool Duck Camo 19 TWENTY Adjustable",
-        "description": "Original: $49.99, Sale: $27.49",
-        "discount": "45% off",
-        "url": null
-      },
-      {
-        "title": "Arizona Diamondbacks Gradient Raceway 9FORTY M-Crown A-Frame Trucker",
-        "description": "Original: $34.99, Sale: $19.24",
+        "description": "Original: $55.99 | Sale: $30.79 | Savings: 45%",
         "discount": "45% off",
         "url": null
       },
       {
         "title": "Arizona Diamondbacks Everyday Nylon Blue Golfer",
-        "description": "Original: $36.99, Sale: $20.34",
+        "description": "Original: $36.99 | Sale: $20.34 | Savings: 45%",
+        "discount": "45% off",
+        "url": null
+      },
+      {
+        "title": "Arizona Diamondbacks Gradient Raceway 9FORTY M-Crown A-Frame Trucker",
+        "description": "Original: $34.99 | Sale: $19.24 | Savings: 45%",
+        "discount": "45% off",
+        "url": null
+      },
+      {
+        "title": "Arizona Diamondbacks Three Looms Wool Duck Camo 19 TWENTY Adjustable",
+        "description": "Original: $49.99 | Sale: $27.49 | Savings: 45%",
         "discount": "45% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "Store-wide sale up to 45% off select styles with multiple hat items discounted between 25-45%, but no items exceeding 50% discount threshold were found."
+    "summary": "Multiple Arizona Diamondbacks hats are on sale with up to 45% off, but no discounts exceeding 50% were found on this page."
   },
   {
     "id": "new-era-football",
@@ -182,61 +177,61 @@
     "url": "https://www.neweracap.com/collections/nfl-sale?filter.p.m.my_fields.team=Arizona+Cardinals&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 50%, especially on hats",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
         "title": "Up to 45% off select styles",
-        "description": "Sitewide sale on select New Era Cardinal items",
+        "description": "Sitewide promotion on select New Era styles",
         "code": null
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Promotion on Alpha Industries apparel",
+        "description": "Promotion on Alpha Industries branded items",
         "code": null
       },
       {
         "title": "Free shipping over $100",
-        "description": "Free shipping on orders of $100 or more",
+        "description": "Free shipping on orders $100 or more",
         "code": null
       }
     ],
     "item_deals": [
       {
         "title": "Arizona Cardinals 2025 Draft 9FIFTY A-Frame Snapback",
-        "description": "Original: $41.99, Sale: $27.29",
+        "description": "Original $41.99, now $27.29 - 35% off",
         "discount": "35% off",
         "url": null
       },
       {
         "title": "Arizona Cardinals 2025 Draft Golfer",
-        "description": "Original: $39.99, Sale: $25.99",
-        "discount": "35% off",
-        "url": null
-      },
-      {
-        "title": "Arizona Cardinals 2025 Draft 39THIRTY Stretch Fit",
-        "description": "Original: $39.99, Sale: $25.99",
+        "description": "Original $39.99, now $25.99 - 35% off",
         "discount": "35% off",
         "url": null
       },
       {
         "title": "Arizona Cardinals 2025 Training 59 FIFTY Fitted",
-        "description": "Original: $49.99, Sale: $32.49",
+        "description": "Original $49.99, now $32.49 - 35% off",
         "discount": "35% off",
         "url": null
       },
       {
-        "title": "Arizona Cardinals 2025 Training 9SEVENTY Stretch-Snap",
-        "description": "Original: $47.99, Sale: $31.19",
+        "title": "Arizona Cardinals 2025 Draft 59 FIFTY A-Frame Fitted",
+        "description": "Original $49.99, now $32.49 - 35% off",
+        "discount": "35% off",
+        "url": null
+      },
+      {
+        "title": "Arizona Cardinals 2025 Training Split Panel 9FIFTY Snapback",
+        "description": "Original $47.99, now $31.19 - 35% off",
         "discount": "35% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "New Era Cardinals store offers up to 45% off select styles with multiple hat items discounted 25-35%, but no discounts exceed 50% as requested."
+    "summary": "Multiple Arizona Cardinals hats on sale with up to 45% off select styles; no discounts exceed 50% as requested by user."
   },
   {
     "id": "new-era-basketball",
@@ -244,7 +239,7 @@
     "url": "https://www.neweracap.com/collections/nba-sale?filter.p.m.my_fields.team=Phoenix+Suns&filter.v.availability=1",
     "type": "store",
     "notes": "Looking for any discount of over 50%, especially on hats",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
@@ -256,49 +251,49 @@
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Discount on Alpha Industries apparel",
+        "description": "Discount on Alpha Industries branded items",
         "code": null
       },
       {
         "title": "Free shipping over $100",
-        "description": "Free shipping promotion when spending $100 or more",
+        "description": "Free shipping when spending $100 or more",
         "code": null
       }
     ],
     "item_deals": [
       {
         "title": "Phoenix Suns Gold 59 FIFTY A-Frame Fitted",
-        "description": "Hat - Originally $47.99, now $31.19",
+        "description": "Hat with 35% discount",
         "discount": "35% off",
         "url": null
       },
       {
         "title": "Phoenix Suns Sport Classics Pastel 59 FIFTY Fitted",
-        "description": "Hat - Originally $54.99, now $41.24",
+        "description": "Hat with 25% discount",
         "discount": "25% off",
         "url": null
       },
       {
         "title": "Phoenix Suns Sport Classics Pastel 9 TWENTY A-Frame Adjustable",
-        "description": "Hat - Originally $36.99, now $27.74",
+        "description": "Hat with 25% discount",
         "discount": "25% off",
         "url": null
       },
       {
         "title": "Phoenix Suns Utility Linen 19 TWENTY Adjustable",
-        "description": "Hat - Originally $39.99, now $29.99",
+        "description": "Hat with 25% discount",
         "discount": "25% off",
         "url": null
       },
       {
-        "title": "Phoenix Suns Alpha Industries L-2B Hooded Bomber Jacket",
-        "description": "Jacket - Originally $249.99, now $125.00",
-        "discount": "50% off",
+        "title": "Phoenix Suns Sport Classics Chrome White T-Shirt",
+        "description": "T-shirt with 25% discount",
+        "discount": "25% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "Store is offering up to 45% off select Phoenix Suns styles with multiple hat options discounted 25-35%, but no items exceed 50% discount threshold except the bomber jacket at exactly 50% off."
+    "summary": "Store is running an up to 45% off sale on select Phoenix Suns items, but no hats exceed the requested 50% discount threshold."
   },
   {
     "id": "new-era-minorleagues",
@@ -306,35 +301,35 @@
     "url": "https://www.neweracap.com/collections/milb-sale",
     "type": "store",
     "notes": "Looking for any discount of over 50%, especially on hats",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
         "title": "Up to 45% off select styles",
-        "description": "Sitewide promotion on select MiLB items",
+        "description": "Sale on select MiLB styles",
         "code": null
       },
       {
         "title": "30% off select Alpha Industries styles",
-        "description": "Discount on Alpha Industries branded items",
+        "description": "Discount on Alpha Industries apparel",
         "code": null
       },
       {
-        "title": "Free shipping over $100",
-        "description": "Free shipping threshold promotion",
+        "title": "Free shipping",
+        "description": "Free shipping on orders over $100",
         "code": null
       },
       {
         "title": "Gift with Purchase",
-        "description": "Free New Era Cap Mini 59 FIFTY Fitted Hat with purchases over $100",
+        "description": "Free Mini Cap with orders over $100",
         "code": null
       }
     ],
     "item_deals": [],
     "is_on_sale": true,
-    "summary": "Store-wide sale with up to 45% off select styles and 30% off Alpha Industries items, but no individual items with prices are visible on the page; maximum discount found is below the 50% threshold requested."
+    "summary": "The MiLB Sale page offers up to 45% off select styles and 30% off select Alpha Industries styles, but no individual items with specific prices are listed in the page text, and no discounts exceed 50%."
   },
   {
     "id": "nike-store",
@@ -342,51 +337,51 @@
     "url": "https://www.nike.com/w/sale",
     "type": "store",
     "notes": "Anything over 50% off",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
-        "title": "Free Shipping for Members",
-        "description": "Members receive free shipping on orders $50+",
-        "code": null
+        "title": "Extra 20% Off Select Styles",
+        "description": "Additional 20% off on select styles across the sale",
+        "code": "LASTSHOT"
       }
     ],
     "item_deals": [
       {
-        "title": "Nike Free Run Flyknit 2018",
-        "description": "Women's Running Shoes - $82.97 (was $120)",
-        "discount": "30% off",
-        "url": null
-      },
-      {
-        "title": "Nike SB Malor TE",
-        "description": "Skate Shoes - $55.97 (was $80)",
-        "discount": "30% off",
-        "url": null
-      },
-      {
-        "title": "Nike Tech Men's Woven Reflective Pants",
-        "description": "$96.97 (was $140)",
-        "discount": "30% off",
-        "url": null
-      },
-      {
-        "title": "Nike Swoosh Men's Dri-FIT French Terry Pullover Fitness Hoodie",
-        "description": "$51.97 (was $75)",
-        "discount": "30% off",
+        "title": "San Francisco 49ers Pegasus 41",
+        "description": "Men's Nike NFL Road Running Shoes - Current: $106.97, Original: $155",
+        "discount": "31% off",
         "url": null
       },
       {
         "title": "Nike Stride Men's Dri-FIT 5\" Brief-Lined Running Shorts",
-        "description": "$37.97 (was $55)",
+        "description": "Multiple color options - Current: $37.97, Original: $55",
         "discount": "31% off",
+        "url": null
+      },
+      {
+        "title": "Nike Dunk High Retro",
+        "description": "Men's Shoe - Current: $108.97, Original: $155",
+        "discount": "29% off",
+        "url": null
+      },
+      {
+        "title": "Nike SB Malor TE",
+        "description": "Skate Shoes - Current: $55.97, Original: $80",
+        "discount": "30% off",
+        "url": null
+      },
+      {
+        "title": "Nike Free Run Flyknit 2018",
+        "description": "Women's Running Shoes - Current: $82.97, Original: $120",
+        "discount": "30% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "Nike Sale page features multiple items with discounts ranging from 12% to 31% off; no items exceed the 50% off threshold requested by the user."
+    "summary": "Nike Sale page features up to 31% off individual items with an additional 20% off promo code LASTSHOT available, but no items exceed the 50% off threshold requested."
   },
   {
     "id": "best-buy-sale",
@@ -394,71 +389,14 @@
     "url": "https://www.bestbuy.com/top-deals",
     "type": "store",
     "notes": "Anything over 50% off",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
-    "store_wide_deals": [
-      {
-        "title": "Save up to $1,500 on select LG TVs",
-        "description": "LG 55\" class or larger TVs, LG model OLED77C5PUA has $1,500 savings",
-        "code": null
-      },
-      {
-        "title": "Save up to 65% on select speakers",
-        "description": "Large discount on speaker selection",
-        "code": null
-      },
-      {
-        "title": "Save up to 50% on select Ninja and Shark appliances",
-        "description": "Appliance sale up to 50% off",
-        "code": null
-      },
-      {
-        "title": "TVs under $500 after savings",
-        "description": "Multiple TV models available under $500",
-        "code": null
-      },
-      {
-        "title": "Save up to $100 on select Sony headphones",
-        "description": "Sony audio products on sale",
-        "code": null
-      }
-    ],
-    "item_deals": [
-      {
-        "title": "LG - 83\" Class C5 Series OLED evo AI 4K UHD Smart webOS TV",
-        "description": "Save $2,400",
-        "discount": "$2,400 OFF (44% off)",
-        "url": null
-      },
-      {
-        "title": "Samsung - 77\" Class S90F Series OLED 4K UHD Smart Tizen TV",
-        "description": "Save $1,500",
-        "discount": "$1,500 OFF (43% off)",
-        "url": null
-      },
-      {
-        "title": "TCL - 98\" Class QM8K Series 4K UHD HDR QD-Mini LED Smart TV",
-        "description": "Save $2,000",
-        "discount": "$2,000 OFF (40% off)",
-        "url": null
-      },
-      {
-        "title": "Sony - ULT WEAR Wireless Noise Cancelling Headphones",
-        "description": "Save $100",
-        "discount": "$100 OFF (40% off)",
-        "url": null
-      },
-      {
-        "title": "Samsung - 65\" Class U7900 Series UHD 4K Smart Tizen TV",
-        "description": "Save $140",
-        "discount": "$140 OFF (30% off)",
-        "url": null
-      }
-    ],
-    "is_on_sale": true,
-    "summary": "Best Buy Top Deals page features multiple promotions including up to 65% off speakers, up to 50% off appliances, and significant TV discounts up to $2,400 off select models."
+    "store_wide_deals": [],
+    "item_deals": [],
+    "is_on_sale": false,
+    "summary": "Page could not be loaded"
   },
   {
     "id": "fanatics-baseball",
@@ -466,45 +404,51 @@
     "url": "https://www.fanatics.com/mlb/sale-items/o-3487+os-78+z-8052736-97589246?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223074%22%5D%7D",
     "type": "store",
     "notes": "Looking for any discount over 50%",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
-    "store_wide_deals": [],
+    "store_wide_deals": [
+      {
+        "title": "20% Off Nike + Free U.S. Shipping",
+        "description": "20% Off Nike products with Free U.S. Shipping on Orders Over $39",
+        "code": "39SHIP"
+      }
+    ],
     "item_deals": [
+      {
+        "title": "Arizona Diamondbacks Nike Authentic Collection Performance Pullover Hoodie - Black",
+        "description": "Clearance item",
+        "discount": "50% off",
+        "url": null
+      },
       {
         "title": "Arizona Diamondbacks Nike City Connect Club Hoodie - Heather Charcoal",
         "description": "Clearance item",
-        "discount": "36% off ($32.01 savings)",
+        "discount": "36% off",
+        "url": null
+      },
+      {
+        "title": "Arizona Diamondbacks Fanatics Clubhouse Foul Ball A-Frame Adjustable Hat - Red",
+        "description": "Limited-Time Offer",
+        "discount": "50% off",
+        "url": null
+      },
+      {
+        "title": "Arizona Diamondbacks Nike Foul Ball A-Frame Adjustable Hat - Red",
+        "description": "Limited-Time Offer",
+        "discount": "54% off",
         "url": null
       },
       {
         "title": "Arizona Diamondbacks Nike 2025 City Connect Authentic Collection Player Dri-FIT Lightweight Pullover - Purple",
-        "description": "Clearance item marked Almost Gone",
-        "discount": "45% off ($61.00 savings)",
-        "url": null
-      },
-      {
-        "title": "Arizona Diamondbacks Nike Authentic Collection Player Dri-FIT Lightweight Pullover - Black/Red",
         "description": "Clearance item",
-        "discount": "40% off ($18.00 savings)",
-        "url": null
-      },
-      {
-        "title": "Arizona Diamondbacks Nike Authentic Collection Performance Half-Zip Top - Black",
-        "description": "Clearance item marked Almost Gone",
-        "discount": "30% off ($12.00 savings)",
-        "url": null
-      },
-      {
-        "title": "Arizona Diamondbacks Fanatics Modal Short Sleeve T-Shirt - Black",
-        "description": "Clearance item",
-        "discount": "75% off ($60.00 savings)",
+        "discount": "40% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "This is a Fanatics MLB sale page featuring Arizona Diamondbacks merchandise with multiple clearance and limited-time offers, with several items discounted over 50% including a Fanatics Modal T-Shirt at 75% off and a Nike City Connect Pullover at 45% off."
+    "summary": "This is a MLB sale page featuring multiple items with discounts over 50%, including clearance and limited-time offers, plus a store-wide promotion for 20% off Nike products with free shipping."
   },
   {
     "id": "47",
@@ -512,56 +456,56 @@
     "url": "https://www.47brand.com/collections/sale",
     "type": "store",
     "notes": "Looking for any discount of more than 40%, especially on hats",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
-        "title": "Free Shipping on All Orders",
-        "description": "Free shipping on all orders for '47 Family members",
+        "title": "Extra 25% Off Sale Items",
+        "description": "Additional 25% discount applied to all sale items sitewide",
         "code": null
       },
       {
-        "title": "Extra 25% Off Discount",
-        "description": "Additional 25% off on sale items",
+        "title": "Free Shipping on All Orders",
+        "description": "Free shipping for all orders, with additional benefits for '47 Family members",
         "code": null
       }
     ],
     "item_deals": [
       {
-        "title": "DETROIT LIONS DIAMOND CUT '47 HITCH RF RELAXED FIT",
-        "description": "50% off - Reduced from $45 to $16.88, with extra 25% off available",
+        "title": "Detroit Lions Diamond Cut '47 Hitch RF Relaxed Fit",
+        "description": "Originally $45, now $16.88 with extra 25% off discount",
         "discount": "50% off",
         "url": null
       },
       {
-        "title": "KANSAS CITY CHIEFS HARBOR '47 CUFF KNIT",
-        "description": "50% off - Reduced from $30 to $11.25, with extra 25% off available",
+        "title": "Kansas City Chiefs Harbor '47 Cuff Knit",
+        "description": "Originally $30, now $11.25 with extra 25% off discount",
         "discount": "50% off",
         "url": null
       },
       {
-        "title": "INDIANAPOLIS COLTS HARBOR '47 CUFF KNIT",
-        "description": "50% off - Reduced from $30 to $11.25, with extra 25% off available",
+        "title": "Indianapolis Colts Harbor '47 Cuff Knit",
+        "description": "Originally $30, now $11.25 with extra 25% off discount",
         "discount": "50% off",
         "url": null
       },
       {
-        "title": "LOS ANGELES CLIPPERS RETRO SURF '47 HITCH",
-        "description": "30% off - Reduced from $45 to $23.63, with extra 25% off available",
+        "title": "Los Angeles Clippers Retro Surf '47 Hitch",
+        "description": "Originally $45, now $23.63 with extra 25% off discount",
         "discount": "30% off",
         "url": null
       },
       {
-        "title": "NEW YORK KNICKS RETRO SURF '47 FOUNDATION TEE",
-        "description": "30% off - Reduced from $55 to $28.88, with extra 25% off available",
+        "title": "New York Knicks Retro Surf '47 Foundation Tee",
+        "description": "Originally $55, now $28.88 with extra 25% off discount",
         "discount": "30% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "Multiple hats with 50% and 30% discounts are available on this '47 sale page, with several hat options exceeding the requested 40% discount threshold, plus an additional 25% off promotion."
+    "summary": "Multiple hats available at 50% off and 30% off with an additional 25% discount, meeting the user's requirement for discounts over 40%."
   },
   {
     "id": "Vans",
@@ -569,71 +513,25 @@
     "url": "https://www.vans.com/en-us/c/shop-5000",
     "type": "store",
     "notes": "Looking for any discount over 50%",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
-        "title": "Extra 40% Off Sale Styles",
-        "description": "Extra 40% off sale items, price as marked",
+        "title": "Vans Family Welcome Offer",
+        "description": "15% off first order plus free shipping on orders $50+",
         "code": null
       },
       {
-        "title": "30% Off Clothing",
-        "description": "30% off all clothing items",
-        "code": null
-      },
-      {
-        "title": "30% Off Hats",
-        "description": "30% off all hats",
-        "code": null
-      },
-      {
-        "title": "Spring Break Sale",
-        "description": "Extra 40% Off Sale Styles + 30% Off Clothing & Hats",
-        "code": null
-      },
-      {
-        "title": "Vans Family",
-        "description": "15% Off First Order + Free Shipping on Orders $50+",
+        "title": "Sale Section",
+        "description": "450 items marked as on sale",
         "code": null
       }
     ],
-    "item_deals": [
-      {
-        "title": "Vans Shoe Laces",
-        "description": "Initial: $6.00, Previous: $3.95, Current: $2.37",
-        "discount": "60% off",
-        "url": null
-      },
-      {
-        "title": "Checkerboard Vans Fat Shoe Laces",
-        "description": "Initial: $6.00, Previous: $3.95, Current: $2.37",
-        "discount": "60% off",
-        "url": null
-      },
-      {
-        "title": "Big Kids Knu Skool Shoe",
-        "description": "Initial: $58.00, Previous: $39.95, Current: $23.97",
-        "discount": "59% off",
-        "url": null
-      },
-      {
-        "title": "Old Skool Checkerboard Shoe",
-        "description": "Initial: $75.00, Previous: $59.95, Current: $35.97",
-        "discount": "52% off",
-        "url": null
-      },
-      {
-        "title": "Classic Half Crew Socks 3-Pack",
-        "description": "Initial: $18.00, Previous: $12.95, Current: $7.77",
-        "discount": "57% off",
-        "url": null
-      }
-    ],
+    "item_deals": [],
     "is_on_sale": true,
-    "summary": "Vans has a Spring Break Sale offering Extra 40% Off sale styles plus 30% Off Clothing & Hats, with multiple items discounted over 50% including shoe laces (60% off), socks (57% off), and select shoes (52-59% off)."
+    "summary": "The Vans store page shows 450 items in a Sale section and offers 15% off for new Vans Family members, but no specific items with discounts over 50% or individual discount percentages are displayed in the page text."
   },
   {
     "id": "Adidas",
@@ -641,25 +539,25 @@
     "url": "https://www.adidas.com/us/sale",
     "type": "store",
     "notes": "Looking for any discount over 50%",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [
       {
         "title": "Extra 30% off Clothes & Shoes",
-        "description": "Extra 30% off select clothes and shoes with code MARCH",
+        "description": "Extra 30% off select clothes & shoes with code MARCH. Offer ends 3/30.",
         "code": "MARCH"
       },
       {
-        "title": "Spring Sale",
-        "description": "Extra 30% off select items during spring sale",
+        "title": "Extra 30% off Home Sale Spring",
+        "description": "Extra 30% off Home Sale Spring items",
         "code": null
       }
     ],
     "item_deals": [],
     "is_on_sale": true,
-    "summary": "Adidas is offering an extra 30% off select clothes and shoes with promo code MARCH, but no individual items exceeding 50% discount were identified in the page text."
+    "summary": "Adidas is offering an extra 30% off select clothes and shoes with promo code MARCH through 3/30, but no individual items with over 50% discount were found on this listing page."
   },
   {
     "id": "fanatics-football",
@@ -667,45 +565,51 @@
     "url": "https://www.fanatics.com/nfl/sale-items/o-1383+os-45+z-91438378-2717467054?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223418%22%5D%7D",
     "type": "store",
     "notes": "Looking for any discount over 50%",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
-    "store_wide_deals": [],
+    "store_wide_deals": [
+      {
+        "title": "20% Off Nike + Free U.S. Shipping",
+        "description": "20% Off Nike products with free U.S. shipping on orders over $39",
+        "code": "39SHIP"
+      }
+    ],
     "item_deals": [
       {
-        "title": "Kyler Murray Arizona Cardinals Nike 2025 Rivalries Collection Game Jersey - Natural",
-        "description": "Current price $77.99, original price $139.99",
-        "discount": "44% off",
-        "url": null
-      },
-      {
         "title": "Kyler Murray Arizona Cardinals Nike Vapor F.U.S.E. Elite Jersey - Cardinal",
-        "description": "Current price $209.99, original price $349.99",
+        "description": "Was $349.99, now $209.99",
         "discount": "40% off",
         "url": null
       },
       {
         "title": "Arizona Cardinals Nike Women's Monaco Lightweight Full-Zip Hoodie - Heather Black/White",
-        "description": "Current price $35.99, original price $79.99",
-        "discount": "55% off",
+        "description": "Was $189.99, now $97.99",
+        "discount": "48% off",
         "url": null
       },
       {
-        "title": "Arizona Cardinals Fanatics Geometric Chrome Pullover Hoodie - Cardinal",
-        "description": "Current price $23.99, original price $69.99",
-        "discount": "66% off",
+        "title": "Kyler Murray Arizona Cardinals Nike 2025 Rivalries Collection Limited Jersey - Natural",
+        "description": "Was $189.99, now $97.99",
+        "discount": "48% off",
         "url": null
       },
       {
-        "title": "Arizona Cardinals Fanatics Call The Shot Pullover Hoodie - Cardinal",
-        "description": "Current price $22.99, original price $69.99",
-        "discount": "67% off",
+        "title": "Arizona Cardinals Nike Women's Monaco Lightweight Full-Zip Hoodie",
+        "description": "Was $189.99, now $35.99",
+        "discount": "81% off",
+        "url": null
+      },
+      {
+        "title": "Arizona Cardinals WinCraft 12\" x 30\" Premium Pennant",
+        "description": "Was $9.99, now $3.99",
+        "discount": "60% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "Store page with multiple Cardinals items on clearance; found 5 items with discounts over 50%, including hoodies and jerseys with savings up to 67%."
+    "summary": "Store page with multiple clearance and limited-time sale items; several items have discounts over 50%, with the WinCraft pennant at 60% off and Arizona Cardinals Nike Women's Monaco Hoodie at 81% off being the deepest discounts found."
   },
   {
     "id": "fanatics-basketball",
@@ -713,45 +617,51 @@
     "url": "https://www.fanatics.com/nba/sale-items/o-3536+os-45+z-94759805-345224176?_ref=m-TOPNAV&sortOption=TopSellers&pageSize=72&filters=%7B%22t%22%3A%5B%223382%22%5D%7D",
     "type": "store",
     "notes": "Looking for any discount over 50%",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
-    "store_wide_deals": [],
+    "store_wide_deals": [
+      {
+        "title": "20% Off Nike + Free U.S. Shipping",
+        "description": "20% Off Nike products with Free U.S. Shipping on Orders Over $39",
+        "code": "39SHIP"
+      }
+    ],
     "item_deals": [
       {
-        "title": "Phoenix Suns Mitchell & Ness Hardwood Classics 75th Anniversary Swingman Shorts - Black",
-        "description": "Current price $66.99, Original price $159.99",
-        "discount": "58% off",
+        "title": "Phoenix Suns Mitchell & Ness 1996/97 Hardwood Classics Fadeaway Reload 3.0 Swingman Shorts",
+        "description": "Sale price $32.99, original $79.99",
+        "discount": "59% off",
         "url": null
       },
       {
-        "title": "Phoenix Suns Mitchell & Ness Hardwood Classics There and Back Pullover Sweatshirt - Purple",
-        "description": "Current price $49.99, Original price $99.99",
+        "title": "Phoenix Suns Fanatics Anorak Flagrant Foul Color-Block Raglan Hoodie Half-Zip Jacket",
+        "description": "Sale price $47.99, original $79.99",
+        "discount": "40% off",
+        "url": null
+      },
+      {
+        "title": "Phoenix Suns Mitchell & Ness Hardwood Classics Split Pullover Hoodie",
+        "description": "Sale price $42.99, original $109.99",
+        "discount": "61% off",
+        "url": null
+      },
+      {
+        "title": "Phoenix Suns Mitchell & Ness Head Coach Pullover Hoodie",
+        "description": "Sale price $65.99, original $109.99",
+        "discount": "40% off",
+        "url": null
+      },
+      {
+        "title": "Phoenix Suns Mitchell & Ness Hardwood Classics There and Back Pullover Sweatshirt",
+        "description": "Sale price $49.99, original $99.99",
         "discount": "50% off",
-        "url": null
-      },
-      {
-        "title": "Phoenix Suns NBA & KidSuper Studios by Fanatics Unisex Hometown Jersey - Red",
-        "description": "Current price $66.99, Original price $149.99",
-        "discount": "55% off",
-        "url": null
-      },
-      {
-        "title": "Phoenix Suns Pro Standard Chenille Shorts - Black",
-        "description": "Current price $76.99, Original price $109.99",
-        "discount": "30% off",
-        "url": null
-      },
-      {
-        "title": "Phoenix Suns Mitchell & Ness Head Coach Pullover Hoodie - Orange/Purple",
-        "description": "Current price $54.99, Original price $99.99",
-        "discount": "45% off",
         "url": null
       }
     ],
     "is_on_sale": true,
-    "summary": "This Fanatics store page features Phoenix Suns clearance items with multiple products offering over 50% discount, including shorts, hoodies, and jerseys with savings up to 58%."
+    "summary": "This Fanatics store page features clearance items on Phoenix Suns merchandise with multiple items discounted over 50%, plus a 20% off Nike promotion with code 39SHIP."
   },
   {
     "id": "uniqlo",
@@ -759,13 +669,13 @@
     "url": "https://www.uniqlo.com/us/en/feature/sale/men?storeId=129910&inventoryCondition=1",
     "type": "store",
     "notes": "Looking for any discount over 50%",
-    "last_scan": "2026-03-28T10:05:44.081678+00:00",
+    "last_scan": "2026-03-29T10:06:23.196695+00:00",
     "current_price": null,
     "original_price": null,
     "discount_pct": null,
     "store_wide_deals": [],
     "item_deals": [],
     "is_on_sale": true,
-    "summary": "This is a men's clothing sale page at Uniqlo with many items marked on sale, but no original prices or discount percentages are displayed in the page text, and no items appear to have discounts exceeding 50%."
+    "summary": "This is a men's sale page with multiple items marked as 'Sale' but no original prices or specific discount percentages are provided in the page text, and no items show discounts over 50%."
   }
 ]
