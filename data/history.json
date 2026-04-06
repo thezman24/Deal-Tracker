@@ -1574,5 +1574,133 @@
     "price": null,
     "discount_pct": null,
     "is_on_sale": true
+  },
+  {
+    "id": "my-first-item",
+    "name": "Mammoth Hat",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": "$37.99",
+    "discount_pct": null,
+    "is_on_sale": false
+  },
+  {
+    "id": "dbacks-hat",
+    "name": "DBacks Hat",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": "$79.99",
+    "discount_pct": null,
+    "is_on_sale": false
+  },
+  {
+    "id": "Cardinals-hat",
+    "name": "Cardinals Hat",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": "$31.19",
+    "discount_pct": 35,
+    "is_on_sale": true
+  },
+  {
+    "id": "new-era-baseball",
+    "name": "New Era DBacks",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "new-era-football",
+    "name": "New Era Cardinals",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "new-era-basketball",
+    "name": "New Era Suns",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "new-era-minorleagues",
+    "name": "New Era MiLB",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "nike-store",
+    "name": "Nike Sale",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "best-buy-sale",
+    "name": "Best Buy",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "fanatics-baseball",
+    "name": "Fanatics DBacks",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "47",
+    "name": "47",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "Vans",
+    "name": "Vans",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": false
+  },
+  {
+    "id": "Adidas",
+    "name": "Adidas Sale",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "fanatics-football",
+    "name": "Fanatics Cardinals",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "fanatics-basketball",
+    "name": "Fanatics Suns",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
+  },
+  {
+    "id": "uniqlo",
+    "name": "Uniqlo",
+    "ts": "2026-04-06T11:39:12.007048+00:00",
+    "price": null,
+    "discount_pct": null,
+    "is_on_sale": true
   }
 ]
