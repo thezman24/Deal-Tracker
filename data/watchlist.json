@@ -4,21 +4,21 @@
     "name": "Mammoth Hat",
     "url": "https://www.neweracap.com/products/erie-moon-mammoths-black-9seventy-stretch-snap?_pos=1&_fid=3bc3027da&_ss=c",
     "type": "item",
-    "notes": "Alert me if under $37.99"
+    "notes": "Alert me if under $37.98"
   },
   {
     "id": "dbacks-hat",
     "name": "DBacks Hat",
     "url": "https://www.neweracap.com/products/arizona-diamondbacks-gore-tex-white-9seventy-stretch-snap?_pos=4&_fid=84b930053&_ss=c",
     "type": "item",
-    "notes": "Alert me if under $79.99"
+    "notes": "Alert me if under $79.98"
   },
   {
     "id": "Cardinals-hat",
     "name": "Cardinals Hat",
     "url": "https://www.neweracap.com/products/arizona-cardinals-2025-training-9forty-m-crown-a-frame-snapback-hat?_pos=56&_fid=772da3eba&_ss=c",
     "type": "item",
-    "notes": "Alert me if under $31.19"
+    "notes": "Alert me if under $31.18"
   },
   {
     "id": "new-era-baseball",
@@ -110,5 +110,12 @@
     "url": "https://www.uniqlo.com/us/en/feature/sale/men?storeId=129910&inventoryCondition=1",
     "type": "store",
     "notes": "Looking for any discount over 50%"
+  },
+  {
+    "id": "candles",
+    "name": "Candles",
+    "url": "https://www.bathandbodyworks.com/c/all-candles/3-wick-candles",
+    "type": "store",
+    "notes": "Looking for any 3-wick candle discount"
   }
 ]
